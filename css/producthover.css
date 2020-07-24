@@ -1,0 +1,57 @@
+ 
+/*Fade Hover Effect*/
+.hover-fade a 
+{
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.hover-fade img {
+  width: 100%;
+  height: auto;
+}
+.hover-fade:hover img 
+{    
+  opacity: 0.5;
+  transition: 0.3s; 
+}
+
+
+.cc1 p
+{
+  color: #c59d5f !important;
+  display: none !important;
+}
+.as:hover .cc1 p
+{
+  color: #c59d5f !important;
+  display: block !important;
+  text-decoration: underline !important;
+}
+.as:hover .add p
+{
+  display: none !important;
+
+}
+
+
+
+/*product add cart hover*/
+
+.pl-maincontain .pl-dt1 .pl-dis
+{
+  display: block;
+}
+.pl-maincontain .pl-dt1 a:hover .pl-dis
+{
+  display: none !important;
+}
+.pl-maincontain .pl-dt1 .pl-dis1
+{
+  display: none;
+  color: #c59d5f;
+}
+.pl-maincontain .pl-dt1 a:hover .pl-dis1
+{
+  display: block !important;
+}

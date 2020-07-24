@@ -1,0 +1,105 @@
+
+/*admin register*/
+
+.reg-admin
+{
+  height: auto;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
+.reg-admin .btn{
+  background-color: #14b0f3;
+}
+.reg-admin .btn:hover{
+  background-color: #0093d2;
+}
+.reg-admin #rectangle{
+  border: solid 2px white;
+  background-color: white;
+  padding: 2em 2em 2em 2em;
+  -webkit-box-shadow: 3px 4px 4px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 4px 4px -2px rgba(0,0,0,0.75);
+  box-shadow: 3px 4px 4px -2px rgba(0,0,0,0.75);
+}
+.reg-admin #blanc{
+  max-width: 50%;
+  min-width: 50%;
+}
+
+
+/*admin login*/
+
+.log-admin
+{
+  background: linear-gradient(135deg, #d9e3e4, #fcb2bf);
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+.log-admin .wrap {
+  background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("img/admin-login.png");
+  padding-bottom: 30px;
+}
+.log-admin .container {
+  width: 22em;
+  padding: 0;
+  margin: 0 auto;
+  background: linear-gradient(to bottom, #5ea3a9, #f97c92);
+  color: #fff;
+  box-shadow: 40px 40px 10px #222;
+}
+
+.log-admin #logo {
+  padding: 2em;
+  font-size: 3em;
+  text-shadow: 5px 2px 3px #222;
+  font-family: 'Abril Fatface', cursive;
+}
+
+.log-admin #login {
+  margin: 5em auto 1.5em;
+  font-size: 0.9em;
+  padding: 1em;
+}
+
+.log-admin #email,.log-admin #password {
+  border: none;
+  background: none;
+  border-bottom: 1px solid #88f1fa;
+  width: 85%;
+  margin-bottom: 1.2em;
+  padding-bottom: 10px;
+  color: #eee;
+}
+.log-admin #email::placeholder,.log-admin #password::placeholder {
+  color: #eee;
+  font-size: 0.95em;
+}
+
+.log-admin #email:focus,.log-admin #password:focus {
+  outline: none;
+  color: #eee;
+}
+
+.log-admin .register {
+  display: block;
+  text-align: center;
+  border: 2px solid #88f1fa;
+  width: 80%;
+  margin: auto;
+  border-radius: 50px;
+  padding: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+}
+
+.log-admin .register:hover {
+  background: rgba(136, 241, 250, 1);
+  text-decoration: none;
+}
+
+.log-admin .register:focus,.log-admin .login-link:focus {
+  text-decoration: none;
+}

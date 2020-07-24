@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Register</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" type="text/css" href="admin.css">
+</head>
+<body>
+<div class="reg-admin">
+  <div class="container">
+    <div class="row" id="blanc">
+      <div class="col" id="rectangle">
+        <form>
+          <div class="input-field col m6">
+            <label>First Name</label>
+            <input type="text" placeholder="shweta" required>
+          </div>
+
+          <div class="input-field col m6">
+            <label for="nom">Last Name</label>
+            <input type="text"placeholder="koli" required>
+          </div>
+
+          <div class="input-field col m6">
+            <label >Mobile no</label>
+            <input type="text" placeholder="9876543210" required>
+          </div>
+
+
+          <div class="input-field col m6">
+            <label>City</label>
+            <input type="text" placeholder="surat" required>
+          </div>
+
+           <div class="input-field col m6">
+            <label >Password</label>
+            <input type="Password" placeholder="......." required>
+          </div>
+
+          <div class="input-field col m6">
+            <label >Re-Password</label>
+            <input type="Password"  placeholder="......." required>
+          </div>
+
+          <div class="input-field col m12">
+            <label>Date of Birth</label>
+            <input type="text" class="datepicker" placeholder="05/11/1999"  required>
+          </div>
+
+          <div class="input-field col m12">
+            <label >Email</label>
+            <input  type="email"placeholder="shweta@gmail.com" required>
+          </div>
+
+          <div class="input-field col m12">
+            <button class="btn waves-effect waves-light pulse" type="submit" name="action">Reegister
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script type="text/javascript" src="js.js"></script>
+
+  <script>
+    const date = document.querySelector('.datepicker');
+    M.Datepicker.init(date,{format:'d-mmm-yyyy'});
+  </script>
+
+</body>
+</html>

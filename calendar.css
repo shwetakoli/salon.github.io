@@ -1,0 +1,698 @@
+
+.yellow, .prev-.yellow {
+  font-family: 'Monserrat', sans-serif;
+  top: 0;
+  left: 0;
+   width:450px;
+  height: auto;
+  background: #FCEE6D;
+}
+.yellow.yellow, .prev-.yellow.yellow {
+  background: #FCEE6D;
+  transition: all 0.2s ease-in-out;
+}
+.yellow #calendar, .prev-.yellow #calendar {
+  padding-bottom: 1.25em;
+  height: auto;
+  background:#1e1e1e;
+  color: #FFF;
+  position: relative;
+  box-shadow: 3px 3px 15px 0px rgba(41, 50, 63, 0.75);
+  -webkit-user-select: none;
+  user-select: none;
+}
+.yellow #calendar .input a, .prev-.yellow #calendar .input a {
+  display: block;
+  top: 0;
+  left: 0;
+  position: absolute;
+  padding: 1em 1.5em;
+  width: 100%;
+  background-size: 200% 100%;
+  background-image: linear-gradient(to left, #FCEE6D 50%, transparent 50%);
+  transition: background-position .1s ease-in-out;
+}
+.yellow #calendar .input a:hover, .prev-.yellow #calendar .input a:hover {
+  cursor: pointer;
+  background-position: 100% 0;
+}
+.yellow #calendar .has-event:after, .prev-.yellow #calendar .has-event:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  border: 0.1em solid #FCEE6D;
+  height: 1.4em;
+  width: 1.4em;
+  margin-left: -0.8em;
+  margin-top: -0.8em;
+}
+.yellow #calendar .has-event.expanded, .prev-.yellow #calendar .has-event.expanded {
+  color: #29323F;
+}
+.yellow #calendar .has-event.expanded:hover, .prev-.yellow #calendar .has-event.expanded:hover {
+  color: #29323F !important;
+}
+.yellow #calendar .has-event.expanded:after, .prev-.yellow #calendar .has-event.expanded:after {
+  background: #FCEE6D;
+  border-radius: 50%;
+  z-index: -1;
+}
+.yellow #calendar #color-picker, .prev-.yellow #calendar #color-picker {
+  background: #FCEE6D;
+  width: 0.65em;
+  height: 0.65em;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  border-radius: 50%;
+  z-index: 10;
+  font-weight: 700;
+}
+.yellow #calendar #color-picker:hover, .prev-.yellow #calendar #color-picker:hover {
+  cursor: pointer;
+}
+.yellow #calendar #dates, .prev-.yellow #calendar #dates {
+  padding: 1em 1.5em 0;
+  position: relative;
+  width: 100%;
+}
+.yellow #calendar #dates #days .day, .prev-.yellow #calendar #dates #days .day {
+  opacity: 0;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.yellow #calendar #dates #days .day:nth-child(0), .prev-.yellow #calendar #dates #days .day:nth-child(0) {
+  animation: fadeIn 0.1s linear 0.2s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(1), .prev-.yellow #calendar #dates #days .day:nth-child(1) {
+  animation: fadeIn 0.1s linear 0.25s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(2), .prev-.yellow #calendar #dates #days .day:nth-child(2) {
+  animation: fadeIn 0.1s linear 0.3s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(3), .prev-.yellow #calendar #dates #days .day:nth-child(3) {
+  animation: fadeIn 0.1s linear 0.35s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(4), .prev-.yellow #calendar #dates #days .day:nth-child(4) {
+  animation: fadeIn 0.1s linear 0.4s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(5), .prev-.yellow #calendar #dates #days .day:nth-child(5) {
+  animation: fadeIn 0.1s linear 0.45s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(6), .prev-.yellow #calendar #dates #days .day:nth-child(6) {
+  animation: fadeIn 0.1s linear 0.5s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(7), .prev-.yellow #calendar #dates #days .day:nth-child(7) {
+  animation: fadeIn 0.1s linear 0.55s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(8), .prev-.yellow #calendar #dates #days .day:nth-child(8) {
+  animation: fadeIn 0.1s linear 0.6s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(9), .prev-.yellow #calendar #dates #days .day:nth-child(9) {
+  animation: fadeIn 0.1s linear 0.65s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(10), .prev-.yellow #calendar #dates #days .day:nth-child(10) {
+  animation: fadeIn 0.1s linear 0.7s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(11), .prev-.yellow #calendar #dates #days .day:nth-child(11) {
+  animation: fadeIn 0.1s linear 0.75s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(12), .prev-.yellow #calendar #dates #days .day:nth-child(12) {
+  animation: fadeIn 0.1s linear 0.8s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(13), .prev-.yellow #calendar #dates #days .day:nth-child(13) {
+  animation: fadeIn 0.1s linear 0.85s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(14), .prev-.yellow #calendar #dates #days .day:nth-child(14) {
+  animation: fadeIn 0.1s linear 0.9s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(15), .prev-.yellow #calendar #dates #days .day:nth-child(15) {
+  animation: fadeIn 0.1s linear 0.95s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(16), .prev-.yellow #calendar #dates #days .day:nth-child(16) {
+  animation: fadeIn 0.1s linear 1s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(17), .prev-.yellow #calendar #dates #days .day:nth-child(17) {
+  animation: fadeIn 0.1s linear 1.05s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(18), .prev-.yellow #calendar #dates #days .day:nth-child(18) {
+  animation: fadeIn 0.1s linear 1.1s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(19), .prev-.yellow #calendar #dates #days .day:nth-child(19) {
+  animation: fadeIn 0.1s linear 1.15s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(20), .prev-.yellow #calendar #dates #days .day:nth-child(20) {
+  animation: fadeIn 0.1s linear 1.2s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(21), .prev-.yellow #calendar #dates #days .day:nth-child(21) {
+  animation: fadeIn 0.1s linear 1.25s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(22), .prev-.yellow #calendar #dates #days .day:nth-child(22) {
+  animation: fadeIn 0.1s linear 1.3s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(23), .prev-.yellow #calendar #dates #days .day:nth-child(23) {
+  animation: fadeIn 0.1s linear 1.35s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(24), .prev-.yellow #calendar #dates #days .day:nth-child(24) {
+  animation: fadeIn 0.1s linear 1.4s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(25), .prev-.yellow #calendar #dates #days .day:nth-child(25) {
+  animation: fadeIn 0.1s linear 1.45s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(26), .prev-.yellow #calendar #dates #days .day:nth-child(26) {
+  animation: fadeIn 0.1s linear 1.5s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(27), .prev-.yellow #calendar #dates #days .day:nth-child(27) {
+  animation: fadeIn 0.1s linear 1.55s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(28), .prev-.yellow #calendar #dates #days .day:nth-child(28) {
+  animation: fadeIn 0.1s linear 1.6s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(29), .prev-.yellow #calendar #dates #days .day:nth-child(29) {
+  animation: fadeIn 0.1s linear 1.65s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(30), .prev-.yellow #calendar #dates #days .day:nth-child(30) {
+  animation: fadeIn 0.1s linear 1.7s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(31), .prev-.yellow #calendar #dates #days .day:nth-child(31) {
+  animation: fadeIn 0.1s linear 1.75s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(32), .prev-.yellow #calendar #dates #days .day:nth-child(32) {
+  animation: fadeIn 0.1s linear 1.8s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(33), .prev-.yellow #calendar #dates #days .day:nth-child(33) {
+  animation: fadeIn 0.1s linear 1.85s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(34), .prev-.yellow #calendar #dates #days .day:nth-child(34) {
+  animation: fadeIn 0.1s linear 1.9s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(35), .prev-.yellow #calendar #dates #days .day:nth-child(35) {
+  animation: fadeIn 0.1s linear 1.95s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(36), .prev-.yellow #calendar #dates #days .day:nth-child(36) {
+  animation: fadeIn 0.1s linear 2s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(37), .prev-.yellow #calendar #dates #days .day:nth-child(37) {
+  animation: fadeIn 0.1s linear 2.05s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(38), .prev-.yellow #calendar #dates #days .day:nth-child(38) {
+  animation: fadeIn 0.1s linear 2.1s forwards;
+}
+.yellow #calendar #dates #days .day:nth-child(39), .prev-.yellow #calendar #dates #days .day:nth-child(39) {
+  animation: fadeIn 0.1s linear 2.15s forwards;
+}
+.yellow #calendar #dates #days .day:hover, .prev-.yellow #calendar #dates #days .day:hover {
+  color: #FCEE6D;
+  cursor: pointer;
+}
+.yellow #calendar #lastMt, .yellow #calendar #nextMt, .prev-.yellow #calendar #lastMt, .prev-.yellow #calendar #nextMt {
+  color:white;
+  position: absolute;
+  top: 1.45em;
+  font-weight: 700;
+  font-size: 1.25em;
+  z-index: 3;
+}
+.yellow #calendar #lastMt:hover, .yellow #calendar #nextMt:hover, .prev-.yellow #calendar #lastMt:hover, .prev-.yellow #calendar #nextMt:hover {
+  cursor: pointer;
+}
+.yellow #calendar #lastMt, .prev-.yellow #calendar #lastMt {
+  left: 3.25em;
+}
+.yellow #calendar #nextMt, .prev-.yellow #calendar #nextMt {
+  right: 3.25em;
+}
+.yellow #calendar #months-cont, .prev-.yellow #calendar #months-cont {
+  width: 50%;
+  overflow: hidden;
+  height: 3em;
+  left:100px;
+  /*margin-left: -25%;*/
+  position: relative;
+}
+.yellow #calendar #months-cont #months, .prev-.yellow #calendar #months-cont #months {
+  height: 100%;
+  white-space: nowrap;
+  padding-top: 1em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.yellow #calendar #months-cont #months .month, .prev-.yellow #calendar #months-cont #months .month {
+  width: 100%;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  color: #FCEE6D;
+  display: inline-block;
+  text-align: center;
+}
+.yellow #calendar #months-cont #months .month:first-child, .prev-.yellow #calendar #months-cont #months .month:first-child {
+  transition: all 0.5s ease-in-out;
+}
+.yellow #calendar #days .day, .yellow #calendar #daysotweek .day, .prev-.yellow #calendar #days .day, .prev-.yellow #calendar #daysotweek .day {
+  width: calc(100%/7);
+  text-align: center;
+  float: left;
+  padding: 0.5em 0;
+  font-size: 0.8em;
+  position: relative;
+  transition: all 0.1s ease-in;
+}
+.yellow #calendar #daysotweek, .prev-.yellow #calendar #daysotweek {
+  margin-top: 0.75em;
+}
+.yellow #info #actual-date, .prev-.yellow #info #actual-date {
+  text-align: center;
+  float: left;
+  padding: 0.5em 0;
+  font-size: 0.8em;
+  background: #FCEE6D;
+  color: #29323F;
+  height: 1.5em;
+  width: 1.5em;
+  line-height: .5em;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+}
+
+
+
+
+
+#info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+#info.show #card .content {
+  animation: flipUp 0.2s linear 0.9s forwards;
+}
+#info.show #bg-card .content {
+  animation: flipUp 0.2s linear 0.6s forwards;
+}
+#info.show #rain .raindrop {
+  i: 1;
+}
+@keyframes rain {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes rain {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#info.show #rain .raindrop#drop-1 {
+  animation: rain 0.1s linear 2s forwards;
+}
+#info.show #rain .raindrop#drop-2 {
+  animation: rain 0.1s linear 2.05s forwards;
+}
+#info.show #rain .raindrop#drop-3 {
+  animation: rain 0.1s linear 2.1s forwards;
+}
+#info.show #rain .raindrop#drop-4 {
+  animation: rain 0.1s linear 2.15s forwards;
+}
+#info #back {
+  color: #626972;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
+#info #weather {
+  width: 88%;
+  left: 50%;
+  margin-left: -44%;
+  position: relative;
+  top: 2em;
+}
+#info #weather #sun {
+  width: 0.75em;
+  height: 0.75em;
+  background: #FCEE6D;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 5.8em;
+  top: 1.8em;
+}
+#info #weather #sun:after {
+  content: '';
+  display: block;
+  width: 0.75em;
+  height: 0.75em;
+  background: gold;
+  position: absolute;
+  left: 0;
+  transform: rotate(-45deg);
+}
+#info #weather #rain {
+  position: absolute;
+  top: 3.8em;
+  width: 11%;
+  left: 50%;
+  margin-left: -18.1%;
+  text-align: center;
+}
+#info #weather #rain .raindrop {
+  opacity: 0;
+  width: 0.35em;
+  height: 0.35em;
+  background: #7ba6ff;
+  border-radius: 50%;
+  position: relative;
+}
+#info #weather #rain .raindrop:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -0.22em;
+  left: 0;
+  border-left: 0.2em solid transparent;
+  border-right: 0.20em solid transparent;
+  border-bottom: 0.35em solid #7ba6ff;
+}
+#info #weather #rain .raindrop.center {
+  top: 0.1em;
+}
+#info #weather #rain .raindrop#drop-1, #info #weather #rain .raindrop#drop-4 {
+  clear: both;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+#info #weather #rain .raindrop#drop-2 {
+  float: left;
+  clear: left;
+}
+#info #weather #rain .raindrop#drop-3 {
+  float: right;
+  clear: right;
+}
+#info #weather #rain .raindrop#drop-4 {
+  top: 0.17em;
+}
+#info #weather #mountains {
+  width: 0;
+  height: 0;
+  border-left: 1.25em solid transparent;
+  border-right: 1.25em solid transparent;
+  border-bottom: 1.75em solid #b1b6bc;
+  top: 1.5em;
+  left: 4em;
+  position: relative;
+}
+#info #weather #mountains:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0em;
+  width: 0;
+  height: 0;
+  bottom: -1.75em;
+  border-left: 0.75em solid transparent;
+  border-right: 0.75em solid transparent;
+  border-bottom: 1.15em solid #dadcdf;
+}
+#info #weather #temp {
+  font-size: 1.5em;
+  display: inline-block;
+  vertical-align: top;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 0em;
+  margin-left: 4.75em;
+}
+#info #weather #temp span {
+  font-size: 0.65em;
+  display: inline-block;
+  padding-top: 0.25em;
+  vertical-align: top;
+}
+#info #month-name {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  position: absolute;
+  top: 1em;
+  right: 3em;
+}
+#info #card {
+  width: 88%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -44%;
+  perspective: 600px;
+  overflow: hidden;
+  height: 10em;
+  background: transparent;
+}
+#info #card .content {
+  background: #FFF;
+  padding: 0.5em;
+  display: inline-block;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+}
+#info #card #event-name {
+  color: #29323F;
+  text-align: center;
+  margin-top: 0.5em;
+  padding-bottom: 0.75em;
+}
+#info #card #event-details {
+  position: relative;
+  width: 100%;
+  white-space: nowrap;
+  text-align: center;
+}
+#info #card #event-details .col-3 {
+  width: 33%;
+  display: inline-block;
+  color: #29323F;
+  vertical-align: top;
+  float: left;
+}
+#info #card #event-details .col-3 h3 {
+  font-size: 0.6em;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+#info #card #event-details .col-3 i {
+  color: #838ECF;
+}
+#info #card #event-details .col-3 i.fa-user {
+  background: #838ECF;
+  color: #FFF;
+  border-radius: 50%;
+  font-size: 0.6em;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+}
+#info #card #event-details .col-3 p {
+  font-size: 0.6em;
+  white-space: normal;
+  color: #626972;
+}
+#info #bg-card {
+  width: 82%;
+  height: 10.5em;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -41%;
+  perspective: 600px;
+  overflow: hidden;
+}
+#info #bg-card .content {
+  background: #626972;
+  padding: 0.5em;
+  display: inline-block;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.hide, .show {
+  transition: all 0.1s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+  z-index: 4;
+}
+@-webkit-keyframes hideOrShow {
+  0% {
+    display: none;
+  }
+  100% {
+    display: block;
+  }
+}
+@keyframes hideOrShow {
+  0% {
+    display: none;
+  }
+  100% {
+    display: block;
+  }
+}
+.show {
+  animation: hideOrShow 0.1s linear 2s forwards;
+}
+
+.hide {
+  opacity: 0;
+  z-index: 1;
+}
+@-webkit-keyframes hideOrShow {
+  0% {
+    display: block;
+  }
+  100% {
+    display: none;
+  }
+}
+@keyframes hideOrShow {
+  0% {
+    display: block;
+  }
+  100% {
+    display: none;
+  }
+}
+.hide {
+  animation: hideOrShow 0.1s linear 2s forwards;
+}
+
+.day-details {
+  clear: both;
+  transform: scaleY(0);
+  transition: all 0.3s ease-in-out;
+  margin: 0 1em 0 -1.5em;
+  transform-origin: top center;
+}
+.day-details input, .day-details .input {
+  transform: scaleY(0);
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  transition: height 0.3s ease-in-out;
+  width: 100%;
+  display: block;
+  height: 0;
+  background: #FFF;
+  color: #29323F;
+  font-size: 0.85em;
+  font-family: 'Montserrat', sans-serif;
+}
+.expanded ~ .day-details.expanded {
+  transform: scaleY(1);
+  transition: all 0.3s ease-in-out;
+}
+.expanded ~ .day-details.expanded input, .expanded ~ .day-details.expanded .input {
+  border: 0;
+  box-shadow: none;
+  padding: 1em 1.5em;
+  line-height: 13px;
+  transform: scaleY(1);
+  box-sizing: content-box;
+  margin: 0 0 0.5em;
+  background: #FFF;
+  transition: height 0.3s ease-in-out;
+}
+.expanded ~ .day-details.expanded #input-arrow{
+  width: 0;
+  height: 0;
+  position: relative;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #FFF;
+  transition: margin-left 0.25s ease-in-out;
+}
+
+/*shweta*/
+.expanded ~ .day-details.expanded input, .expanded ~ .day-details.expanded .input 
+{
+  height: 250px;
+  overflow: auto;
+}
+.expanded ~ .day-details.expanded .input::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.expanded ~ .day-details.expanded .input::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+.expanded ~ .day-details.expanded .input::-webkit-scrollbar-thumb {
+  background: #FCEE6D; 
+}
+.input .timedtl
+{
+  height: 100px;
+  width:100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  background-color:#1e1e1e;
+   color: white;
+}
+.input .timedtl p 
+{
+    margin: 0;
+    padding: 5px 0px;
+}
+.input .timedtl:hover
+{
+  border:1px solid black;
+  background-color: transparent;
+  transition: .5s;
+  color: black;
+}
+.day
+{
+  line-height: 40px;
+}

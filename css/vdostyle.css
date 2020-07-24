@@ -1,0 +1,100 @@
+
+.video {
+	background: #171717;
+	position: relative;
+}
+
+.video-img {
+	height: 500px;
+	position: relative;
+	width: 480px;
+}
+
+.video-img img {
+	height: 100%;
+	width: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.video-left-detail {
+	max-width: 400px;
+}
+
+.video-left-detail h2 {
+	font-size: 40px;
+	line-height: 70px;
+	padding-bottom: 50px;
+	margin: 0;
+}
+
+.video-left-detail p {
+	font-size: 15px;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.video-icon {
+	width: 122px;
+	height: 122px;
+	border-radius: 50%;
+	background: #272727;
+	margin: 0px auto;
+	-webkit-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+.icon {
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	border-radius: 50%;
+	text-align: center;
+}
+
+.icon:after {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	content: '';
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+
+/* Hover effect */
+
+.icon-effect .icon {
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.icon-effect .icon:after {
+	top: -7px;
+	left: -7px;
+	padding: 7px;
+	-webkit-box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
+	box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	-webkit-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0;
+}
+
+.icon-effect-1a .icon:hover:after {
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
+}
+
+.video-icon .fa {
+	color: #fff;
+	font-size: 22px;
+}
+

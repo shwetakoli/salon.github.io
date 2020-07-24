@@ -1,0 +1,75 @@
+
+
+
+    .content
+    {
+      position: relative;
+      width: auto;
+      text-align: center;
+      height: auto;
+      /*align-content: center;*/
+      /*background-color: red;*/
+    }
+    .content .box
+    {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      /*height: auto;*/
+      /*background-color: black;*/
+      /*float: left;*/
+      margin-bottom: 10px;
+      /*margin: 10px;*/
+      box-sizing: border-box; 
+      /*overflow: hidden;*/
+      /*box-shadow: 0 5px 10px rgba(0,0,0.8);*/
+      /*margin-left: 0px;*/
+
+    }
+    .content .box:before
+    {
+      content: '';
+      position: absolute;
+      top:30px;
+       left:10px;
+      right:10px;
+      bottom:30px;
+      border-top: 2px solid #c59d5f;
+      border-bottom: 2px solid #c59d5f;
+      /*box-sizing: border-box;*/
+      transition: 0.5s;
+      transform: scaleX(0);
+      opacity: 0;
+      z-index: 1;
+    }
+    .content .box:hover:before
+    {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+    .content .box:after
+    {
+      content: '';
+      position: absolute;
+      top:30px;
+      left:10px;
+      right:10px;
+      bottom:30px;
+      border-left: 2px solid #c59d5f;
+      border-right: 2px solid #c59d5f;
+      /*box-sizing: border-box;*/
+      transition: 0.5s;
+      transform: scaleY(0);
+      opacity: 0;
+      z-index: 1;
+    }
+    .content .box:hover:after
+    {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}

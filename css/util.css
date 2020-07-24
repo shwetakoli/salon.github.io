@@ -1,0 +1,101 @@
+
+*, *:before, *:after {
+	margin: 0px; 
+	padding: 0px; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.fs-35 
+{
+	font-size: 35px;
+}
+.p-t-22, .p-tb-22, .p-all-22 {padding-top: 22px;}
+.p-b-13, .p-tb-13, .p-all-13 {padding-bottom: 13px;}
+.p-b-22, .p-tb-22, .p-all-22 {padding-bottom: 22px;}
+.p-b-25, .p-tb-25, .p-all-25 {padding-bottom: 25px;}
+.p-b-30, .p-tb-30, .p-all-30 {padding-bottom: 30px;}
+.p-l-5, .p-lr-5, .p-all-5 {padding-left: 5px;}
+.p-l-11, .p-lr-11, .p-all-11 {padding-left: 11px;}
+.p-l-19, .p-lr-19, .p-all-19 {padding-left: 19px;}
+.p-l-45, .p-lr-45, .p-all-45 {padding-left: 45px;}
+.p-l-65, .p-lr-65, .p-all-65 {padding-left: 65px;}
+.p-r-5, .p-lr-5, .p-all-5 {padding-right: 5px;}
+.p-r-10, .p-lr-10, .p-all-10 {padding-right: 10px;}
+.p-r-19, .p-lr-19, .p-all-19 {padding-right: 19px;}
+.p-r-27, .p-lr-27, .p-all-27 {padding-right: 27px;}
+
+
+.lh-10 {line-height: 1.0;}
+
+.s-full {width: 100%; height: 100%;}
+.w-full 
+{
+	width: 100%;
+}
+/*.h-full {height: 100%;}*/
+.pointer 
+{
+	cursor: pointer;
+	color: black;
+}
+.trans-03 {
+	-webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.trans-04 {
+	-webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+.flex-w,
+.flex-r,
+.flex-c-m,
+.flex-r-m,
+.flex-col-l{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+.flex-w {
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.flex-l {
+	justify-content: flex-start;
+}
+
+.flex-r {
+	justify-content: flex-end;
+}
+.flex-c-m {
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.flex-r-m {
+	justify-content: flex-end;
+	-ms-align-items: center;
+	align-items: center;
+}
+.flex-col-l {
+	-ms-align-items: flex-start;
+	align-items: flex-start;
+}
+.flex-col-l{
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+}

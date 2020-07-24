@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit</title>
+	<link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic">
+
+	<link rel="stylesheet" type="text/css" href="css/edit.css">
+
+
+
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css">
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/filepond/dist/filepond.min.css">
+
+	<link rel="stylesheet" type="text/css" href="css/img.css">
+
+</head>
+<body>
+
+	<div ng-app="userProfile" ng-controller="Ctrl">
+		<md-card>
+			<md-toolbar>
+				<div class="md-toolbar-tools">
+					<h2>
+						<span>EDIT PROFILE</span>
+					</h2>
+					<span flex></span>
+					<md-button class="md-icon-button" ng-if="viewMode" ng-click="switchMode()">
+						<md-tooltip>
+							Back to Home
+						</md-tooltip>
+						<a href="index.html">
+							<md-icon><i class="material-icons">home</i></md-icon>    
+						</a>      
+						</md-button>
+						<md-button class="md-icon-button" ng-if="viewMode" ng-click="switchMode()">
+							<md-tooltip>
+								Edit Profile
+							</md-tooltip>
+							<md-icon>mode_edit</md-icon>          
+						</md-button>
+						<md-button class="md-icon-button" ng-if="!viewMode" ng-click="switchMode(); saveChanges()">
+							<md-tooltip>
+								Save Changes
+							</md-tooltip>
+							<md-icon>save</md-icon>
+						</md-button>
+						<md-menu>
+							<md-button class="md-icon-button" ng-click="$mdOpenMenu($event)">
+								<md-tooltip>
+									More Options
+								</md-tooltip>
+								<md-icon>more_vert</md-icon>
+							</md-button>
+							<md-menu-content>
+								<md-menu-item>
+									<md-button ng-click="deleteUser()">
+										<md-icon>delete</md-icon>
+										Delete User
+									</md-button>
+								</md-menu-item>
+								<md-menu-item>
+									<md-button ng-click="resetPassword()">
+										<md-icon>replay</md-icon>
+										Reset Password
+									</md-button>
+								</md-menu-item>
+							</md-menu-content>
+						</md-menu>
+					</div>
+				</md-toolbar>
+
+				
+				<md-card-content layout-sm="column" layout-gt-sm="row">
+					<div class="user" layout-sm layout-gt-sm="column">
+						<div class="edit-img">
+							<input type="file" 
+							       class="filepond"
+							       name="filepond"
+							       accept="image/png, image/jpeg, image/gif"/>
+						</div>
+						<form name="userBasicInfoForm" layout="column" layout-align="start" layout-align-sm="center start" flex>
+							<md-input-container class="user-input-container">
+								<label>Name</label>
+								<textarea name="userName" required class="user-name" ng-model="user.name" ng-disabled="viewMode" flex></textarea>
+								<div ng-messages="userBasicInfoForm.userName.$error">
+									<div ng-message="required">This is required.</div>
+								</div>
+							</md-input-container>
+						</form>
+					</div>
+					<form name="userDetailsForm" flex>
+						<div layout="column" layout-gt-sm="row">
+							<md-input-container flex>
+								<label>Address</label>
+								<input required name="userDepartment" ng-model="user.department" ng-disabled="viewMode"></input>
+								<div ng-messages="userDetailsForm.userDepartment.$error">
+									<div ng-message="required">This is required.</div>
+								</div>
+							</md-input-container>
+							<md-input-container flex>
+								<label>City</label>
+								<textarea name="userLocation" required ng-model="user.location" ng-disabled="viewMode"></textarea>
+								<div ng-messages="userDetailsForm.userLocation.$error">
+									<div ng-message="required">This is required.</div>
+								</div>
+							</md-input-container>
+						</div>
+						<div layout="column" layout-gt-sm="row">
+							<md-input-container flex>
+								<label>State</label>
+								<input name="userCompany" required ng-model="user.company" ng-disabled="viewMode"></input>
+								<div ng-messages="userDetailsForm.userCompany.$error">
+									<div ng-message="required">This is required.</div>
+								</div>
+							</md-input-container>
+							<md-input-container flex>
+								<label>Contry</label>
+								<input name="userManager" required ng-model="user.manager" ng-disabled="viewMode"></input>
+								<div ng-messages="userDetailsForm.userManager.$error">
+									<div ng-message="required">This is required.</div>
+								</div>
+							</md-input-container>
+						</div>
+						<div layout="column" layout-gt-sm="row">
+							<md-input-container flex>
+								<label>Mobile Phone</label>
+								<input type="tel" name="userWorkPhone" required ng-model="user.workPhone" ng-disabled="viewMode"></input>
+								<div ng-messages="userDetailsForm.userWorkPhone.$error">
+									<div ng-message="required">This is required.</div>
+								</div>
+							</md-input-container>
+							<md-input-container flex>
+								<label>E-mail</label>
+								<input type="tel" ng-model="user.mobilePhone" ng-disabled="viewMode"></input>
+							</md-input-container>
+						</div>
+
+						<div layout="column" layout-gt-sm="row">
+							<md-input-container flex>
+								<label>Facebook</label>
+								<input type="tel" name="userWorkPhone" required ng-model="user.workPhone" ng-disabled="viewMode"></input>
+								<div ng-messages="userDetailsForm.userWorkPhone.$error">
+									<div ng-message="required">This is required.</div>
+								</div>
+							</md-input-container>
+							<md-input-container flex>
+								<label>Twitter</label>
+								<input type="tel" ng-model="user.mobilePhone" ng-disabled="viewMode"></input>
+							</md-input-container>
+						</div>
+						<md-input-container>
+							<label>Instagram</label>
+							<input type="email" name="userOtherEmail" ng-model="user.otherEmail" ng-disabled="viewMode"></input>
+							<div ng-messages="userDetailsForm.userOtherEmail.$error">
+								<div ng-message="email">Email address is invalid</div>
+							</div>
+						</md-input-container>
+					</form>
+				</md-card-content>
+			</md-card>
+		</div>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-aria.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-messages.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.js"></script>
+
+		<script >
+			angular.module('userProfile', ['ngMaterial', 'ngMessages'])
+			.controller('Ctrl', function($scope) {
+				$scope.viewMode = true;
+
+    // Switch between view mode and edit mode
+    $scope.switchMode = function() {
+    	return $scope.viewMode = !$scope.viewMode;
+    };
+
+    // Save the changes
+    $scope.saveChanges = function() {
+      /*Validate the input
+      Save the changes*/
+  };
+  
+    // User data
+    $scope.user = {
+    	name: 'Adam Luxor',
+    	title: 'VP of User Experience',
+    	department: 'Product',
+    	location: 'Atlanta',
+    	company: 'BetterCloud',
+    	manager: 'Emily Morgan',
+    	workPhone: '404-555-1212',
+    	mobilePhone: '404-555-6789',
+    	alias: 'adam.luxor@companyname.com',
+    	otherEmail: 'adaml@someothercompany.com'
+    }
+});
+</script>
+
+
+
+<!-- file upload itself is disabled in this pen -->
+
+<script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.min.js"></script>
+<script src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.min.js"></script>
+
+<script src="https://unpkg.com/filepond-plugin-image-exif-orientation/dist/filepond-plugin-image-exif-orientation.min.js"></script>
+
+<script src="https://unpkg.com/filepond-plugin-image-crop/dist/filepond-plugin-image-crop.min.js"></script>
+
+<script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.min.js"></script>
+
+<script src="https://unpkg.com/filepond-plugin-image-transform/dist/filepond-plugin-image-transform.min.js"></script>
+
+<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"></script>
+
+<script src="https://unpkg.com/filepond/dist/filepond.min.js"></script>
+
+<script >
+	/*
+We need to register the required plugins to do image manipulation and previewing.
+*/
+FilePond.registerPlugin(
+	// encodes the file as base64 data
+  FilePondPluginFileEncode,
+	
+	// validates files based on input type
+  FilePondPluginFileValidateType,
+	
+	// corrects mobile image orientation
+  FilePondPluginImageExifOrientation,
+	
+	// previews the image
+  FilePondPluginImagePreview,
+	
+	// crops the image to a certain aspect ratio
+  FilePondPluginImageCrop,
+	
+	// resizes the image to fit a certain size
+  FilePondPluginImageResize,
+	
+	// applies crop and resize information on the client
+  FilePondPluginImageTransform
+);
+
+// Select the file input and use create() to turn it into a pond
+// in this example we pass properties along with the create method
+// we could have also put these on the file input element itself
+FilePond.create(
+	document.querySelector('input'),
+	{
+		labelIdle: `Drag & Drop your picture or <span class="filepond--label-action">Browse</span>`,
+    imagePreviewHeight: 170,
+    imageCropAspectRatio: '1:1',
+    imageResizeTargetWidth: 200,
+    imageResizeTargetHeight: 200,
+    stylePanelLayout: 'compact circle',
+    styleLoadIndicatorPosition: 'center bottom',
+    styleButtonRemoveItemPosition: 'center bottom'
+	}
+);
+</script>
+</body>
+</html>
